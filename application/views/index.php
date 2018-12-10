@@ -8,11 +8,11 @@
 
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo base_url('assets/fonts/beyond_the_mountains-webfont.css" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('assets/fonts/beyond_the_mountains-webfont.css');?>" type="text/css">
 
         <!-- Stylesheets -->
-        <link href="<?php echo base_url('assets/styles/styles.css');?>" rel="stylesheet">
-        <link href="<?php echo base_url('assets/styles.css');?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/plugin-frameworks/swiper.css');?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/plugin-frameworks/bootstrap.min.css');?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/fonts/ionicons.css');?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/styles/styles.css');?>" rel="stylesheet">
 
@@ -54,13 +54,13 @@
 
 <section class="story-area left-text center-sm-text">
         <div class="container">
-                <div class="heading"><h3>Choose from Pizza</h3></div>
+                <div class="heading"><h3>Step 1: Choose a Pizzeria</h3></div>
                 <div class="row">
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x center">
                                                 <a href="menu.html">
-                                                       <img src=""<?php echo base_url('assets/images/');?>"newstuff/albertos.jpg" alt="" style="padding-top: 25%">
+                                                       <img src="<?php echo base_url('assets/images/newstuff/albertos.jpg');?>" alt="" style="padding-top: 25%">
                                                </a>
                                         </div>
                                 </div><!--text-center-->
@@ -78,7 +78,7 @@
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x center">
                                                 <a href="menu.html">
-                                                        <img src=""<?php echo base_url('assets/images/newstuff/michelangelos.jpg');?> alt=""></div>
+                                                        <img src="<?php echo base_url('assets/images/newstuff/michelangelos.jpg');?>" alt=""></div>
                                                 </a>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 --> 
