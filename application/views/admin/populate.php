@@ -5,22 +5,14 @@
 		if(!$conn){
 			die('Not connected to Database');
 		}else{
-			$query = "INSERT INTO product_profile (prod_name, prod_type, prod_descr, img_addr) VALUES ('{$_POST['prod_name']}','{$_POST['prod_type']}','{$_POST['prod_descr']}','{$_POST['img_addr']}')";
+			$query = "INSERT INTO product_profile (prod_name, prod_type, prod_desc, prod_imgurl) VALUES ('{$_POST['prod_name']}','{$_POST['prod_type']}','{$_POST['prod_desc']}','{$_POST['prod_imgurl']}','{$_POST['prod_price']}')";
 			$res = mysqli_query($conn,$query);
 			if ($res==TRUE) {
 				echo "Succesfully inserted (1)";
 			}else{
 				echo "Insertion failed (1)";
 			}
-			$prod_id = mysqli_insert_id($conn);
-			$query2 = "INSERT INTO price_list (prod_id, prod_name, prod_price) VALUES ({$prod_id},'{$_POST['prod_name']}', '{$_POST['prod_price']}')";
-			$res2 = mysqli_query($conn,$query2);
 
-			if ($res2==TRUE) {
-				echo "Succesfully inserted (2)";
-			}else{
-				echo "Insertion failed (2)";
-			}
 		}
 	}else{
 		?>
@@ -43,9 +35,10 @@
 					<input type="radio" name="prod_type" value="salad"><p>Salad</p>
 					<input type="radio" name="prod_type" value="dessert"><p>Dessert</p>
 					<input type="radio" name="prod_type" value="drinks"><p>Drinks</p>
-					<textarea name="prod_descr" rows="3" cols="30" placeholder="Description"></textarea><br><br>
-					<input type="text" name="img_addr" placeholder="Image Address"><br><br>
-					<input type="text" name="prod_price" placeholder="price">
+
+					<textarea name="prod_desc" rows="3" cols="30" placeholder="Description"></textarea><br><br>
+					<input type="text" name="prod_imgurl" placeholder="Image Address"><br><br>
+					<input type="text" name="prod_price" placeholder="price"><br><br>
 					<input type="submit" name="Submit" value="Populate"><br><br>
 				</form>
 			</div>
