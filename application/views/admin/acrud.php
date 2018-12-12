@@ -48,5 +48,3 @@
 			<input type="text" name="password" placeholder="Password">
 			<input type="text" name="cpass" placeholder="Confirm Password">
 		</form>
-</body>
-</html>
