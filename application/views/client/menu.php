@@ -68,10 +68,10 @@
                         die('Not connected to Database'.mysqli_connect_error());
                 }else{
 
-                        $price = mysqli_query($conn,"SELECT * FROM price_list LEFT JOIN product_profile product_profile.prod_id = price_list.prod_id");
-                        if(mysqli_num_rows($price) > 0){
+                        $rs = mysqli_query($conn,"SELECT * FROM prod_profile");
+                        if(mysqli_num_rows($rs) > 0){
                         
-                        while($row = mysqli_fetch_array($price)){
+                        while($row = mysqli_fetch_array($rs)){
                                
                         ?>
 
@@ -81,8 +81,8 @@
                                         <div class="s-left"><img class="br-3" src="images/menu-1-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Margherita</b>
-                                                        <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["price_sizeM"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
-                                                <p class="pr-70">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
+                                                        <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["prod_price"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
+                                                <p class="pr-70">Made with San Marzano tomatoes, mozzarella fior di latte, fresh basil, salt and extra-virgin olive oil.</p>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -93,9 +93,9 @@
                                 <div class="sided-90x mb-30 ">
                                         <div class="s-left"><img class="br-3" src="images/menu-1-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Margherita</b>
-                                                        <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["price_sizeM"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
-                                                <p class="pr-70">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
+                                                <h5 class="mb-10"><b>Hawaiian</b>
+                                                        <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["prod_price"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
+                                                <p class="pr-70">Topped with tomato sauce, cheese, pineapple, and back bacon or ham. </p>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->

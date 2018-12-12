@@ -23,6 +23,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('client/header');
 		$this->load->view('client/index');
 		$this->load->view('client/footer');
+		
+	}
+	public function menu()
+	{
+		$this->index();
+		$this->load->view('application/client/menu.php');
+	}
+}
+class Admin extends CI_Controller {
+
+	
+	public function index()
+	{
+		$this->load->view('admin/index');
 	}
 	public function menu()
 	{

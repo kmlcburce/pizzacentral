@@ -39,7 +39,7 @@
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x center">
-                                                <a href="menu.html">
+                                                <a href="$this->load->view('menu');">
                                                        <img src="<?php echo base_url('assets/images/newstuff/albertos.jpg');?>" alt="" style="padding-top: 25%">
                                                </a>
                                         </div>
@@ -48,7 +48,7 @@
 
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
-                                        <a href="menu.html">
+                                        <a href="<?php echo base_url('application/client/menu.php');?>">
                                                 <div class="ïmg-200x center "><img src="<?php echo base_url('assets/images/newstuff/bianos.jpg');?>" alt=""></div>
                                         </a>
                                 </div><!--text-center-->
@@ -57,7 +57,7 @@
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x center">
-                                                <a href="menu.html">
+                                                <a href="<?php echo base_url('application/client/menu.php');?>">
                                                         <img src="<?php echo base_url('assets/images/newstuff/michelangelos.jpg');?>" alt=""></div>
                                                 </a>
                                 </div><!--text-center-->
@@ -66,7 +66,7 @@
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x center">
-                                                <a href="menu.html">
+                                                <a href="<?php echo base_url('application/client/menu.php');?>">
                                                         <img src="<?php echo base_url('assets/images/newstuff/jca.jpg');?>" alt="">
                                                 </a>
                                         </div>
