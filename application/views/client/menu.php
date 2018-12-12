@@ -57,7 +57,7 @@
                                         <li><a href="#" data-select="pizza"><b>PIZZA</b></a></li>
                                         <li><a href="#" data-select="pasta"><b>PASTA</b></a></li>
                                         <li><a href="#" data-select="salads"><b>SALADS</b></a></li>
-                                        <li><a href="#" data-select="deserts"><b>DESERTS</b></a></li>
+                                        <li><a href="#" data-select="deserts"><b>DESSERTS</b></a></li>
                                 </ul>
                         </div><!--col-sm-12-->
                 </div><!--row-->
