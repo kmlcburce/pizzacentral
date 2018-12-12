@@ -41,7 +41,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 	public function menu()
-	{
+	{	
 		$this->load->view('menu');
 	}
 }
