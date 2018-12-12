@@ -22,7 +22,7 @@
 
 <header style="position: fixed;">
         <div class="container">
-                <a class="logo" href="#"><img src="images/logo-white.png" alt="Logo"></a>
+                <a class="logo" href="#"><img src="<?php echo base_url('assets/images/newstuff/tlogo11.png')?>" alt="Logo"></a>
 
                 <div class="right-area">
                         
@@ -78,7 +78,7 @@
                 <div class="row">
                         <div class="col-md-6 food-menu pizza">
                                 <div class="sided-90x mb-30 ">
-                                        <div class="s-left"><img class="br-3" src="images/menu-1-120x120.jpg" alt="Menu Image"></div><!--s-left-->
+                                        <div class="s-left"><img class="br-3" src="<?php echo base_url('assets/images/menu-1-120x120.jpg')?>" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Margherita</b>
                                                         <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["prod_price"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
@@ -91,7 +91,7 @@
                         ?>
                         <div class="col-md-6 food-menu pizza">
                                 <div class="sided-90x mb-30 ">
-                                        <div class="s-left"><img class="br-3" src="images/menu-1-120x120.jpg" alt="Menu Image"></div><!--s-left-->
+                                        <div class="s-left"><img class="br-3" src="<?php echo base_url('assets/images/menu-1-120x120.jpg')?>" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Hawaiian</b>
                                                         <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["prod_price"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
