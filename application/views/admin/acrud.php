@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		
-	</title>
-</head>
-<body>
+<div class="table-responsive">
 	<?php
         
                 $conn = mysqli_connect("localhost","root","","pizzacentral");
@@ -19,14 +12,18 @@
                         while($row = mysqli_fetch_array($price)){
                                
                         ?>
-		<form>
-			<table>
-				<tr>
-					<td>ID</td><td>Name</td><td>Address</td><td>Status</td>
-				</tr>
-				<tr>
+        <form class="table">
+			<table class="table table-striped table-sm">
+				<thead>
+					<tr>
+						<td>ID</td><td>Name</td><td>Address</td><td>Status</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
 					
-				</tr>
+					</tr>
+				</tbody>
 			</table>
 		</form>
 		<form class="add_prod">

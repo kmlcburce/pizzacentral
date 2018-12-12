@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		
-	</title>
-</head>
-<body>
+<div class="table-responsive">
 	<?php
         
                 $conn = mysqli_connect("localhost","root","","pizzacentral");
@@ -19,9 +12,9 @@
                         while($row = mysqli_fetch_array($price)){
                                
                         ?>
-		<form>
+		<form >
 		ID:
-			<table>
+			<table class="table table-striped table-sm">
 				<tr>
 					<td>Name</td><td>Qty</td><td>Price</td><td>Sub-Total</td>
 				</tr>

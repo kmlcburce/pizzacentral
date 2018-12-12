@@ -28,7 +28,7 @@ class Welcome extends CI_Controller {
 	public function menu()
 	{
 		$this->index();
-		$this->load->view('application/client/menu.php');
+		$this->load->view('client/menu.php');
 	}
 }
 class Admin extends CI_Controller {
@@ -36,7 +36,9 @@ class Admin extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('admin/index');
+		$this->load->view('admin/head');
+		$this->load->view('admin/acrud');
+		$this->load->view('admin/footer');
 	}
 	public function menu()
 	{

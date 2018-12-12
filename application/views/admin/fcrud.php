@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		
-	</title>
-</head>
-<body>
+<div class="table-responsive">
 	<?php
         
                 $conn = mysqli_connect("localhost","root","","pizzacentral");
@@ -20,13 +13,17 @@
                                
                         ?>
 		<form class="table">
-			<table>
-				<tr>
-					<td>ID</td><td>Name</td><td>Description</td><td>Price</td><td>Status</td>
-				</tr>
-				<tr>
+			<table class="table table-striped table-sm">
+				<thead>
+					<tr>
+						<td>ID</td><td>Name</td><td>Description</td><td>Price</td><td>Status</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
 					
-				</tr>
+					</tr>
+				</tbody>
 			</table>
 		</form>
 		<form class="add_prod">
@@ -44,5 +41,4 @@
 			<input type="text" name="cpass" placeholder="Confirm Password">
 			<input type="text" name="address" placeholder="Address">
 		</form>
-</body>
-</html>
+</div>
