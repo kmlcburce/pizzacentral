@@ -31,17 +31,3 @@ class Welcome extends CI_Controller {
 		$this->load->view('client/menu.php');
 	}
 }
-class Admin extends CI_Controller {
-
-	
-	public function index()
-	{
-		$this->load->view('admin/head');
-		$this->load->view('admin/acrud');
-		$this->load->view('admin/footer');
-	}
-	public function menu()
-	{	
-		$this->load->view('menu');
-	}
-}
