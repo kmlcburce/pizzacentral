@@ -27,7 +27,8 @@ class Welcome extends CI_Controller {
 	}
 	public function menu()
 	{
-		$this->index();
-		$this->load->view('client/menu.php');
+		$this->load->view('client/header');
+		$this->load->view('client/menu');
+		$this->load->view('client/footer');
 	}
 }
