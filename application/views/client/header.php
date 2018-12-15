@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
 
         <!-- Font -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url('assets/fonts/beyond_the_mountains-webfont.css');?>" type="text/css">
 
         <!-- Stylesheets -->
@@ -20,19 +20,17 @@
 <body>
 <header style="position: fixed;">
         <div class="container">
-                <a class="logo" href="#"><img src="<?php echo base_url('assets/images/newstuff/tlogo11.png')?>" alt="Logo"></a>
+                <a class="logo" href="http://localhost/pizzacentral"><img src="<?php echo base_url('assets/images/newstuff/tlogo11.png')?>" alt="Logo"></a>
 
-                <div class="right-area">
-                        
+                  <div class="right-area">
+                        <h6><a class="plr-20 color-white btn-fill-primary" href="#">Login</a></h6>
                 </div><!-- right-area -->
-
                 <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
 
                 <ul class="main-menu font-mountainsre" id="main-menu">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="04_blog.html">NEWS</a></li>
-                        <li><a href="05_contact.html">CONTACT</a></li>
-                        <li><a href="02_about_us.html">ABOUT US</a></li>
+                        <li><a href="http://localhost/pizzacentral">HOME</a></li>
+                        <li><a href="http://localhost/pizzacentral/Welcome/news">NEWS</a></li>
+                        <li><a href="http://localhost/pizzacentral/Welcome/contact">CONTACT</a></li>
                 </ul>
 
                 <div class="clearfix"></div>

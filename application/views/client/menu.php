@@ -25,6 +25,7 @@
                 }else{
 
                         $rs = mysqli_query($conn,"SELECT * FROM prod_profile");
+                        echo "$rs";
                         if(mysqli_num_rows($rs) > 0){
                         
                         while($row = mysqli_fetch_array($rs)){
