@@ -31,4 +31,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('client/menu');
 		$this->load->view('client/footer');
 	}
+	public function news(){
+		$this->load->view('client/header');
+		$this->load->view('client/news');
+		$this->load->view('client/footer');
+	}
+	public function contact(){
+		$this->load->view('client/header');
+		$this->load->view('client/contact');
+		$this->load->view('client/footer');
+	}
 }

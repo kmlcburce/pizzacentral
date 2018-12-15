@@ -1,26 +1,3 @@
-
-<header style="position: fixed;">
-        <div class="container">
-                <a class="logo" href="#"><img src="<?php echo base_url('assets/images/newstuff/tlogo11.png');?>" alt="Logo" ></a>
-
-                <div class="right-area">
-                        <h6><a class="plr-20 color-white btn-fill-primary" href="#">Login</a></h6>
-                </div><!-- right-area -->
-
-                <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
-
-                <ul class="main-menu font-mountainsre" id="main-menu">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="04_blog.html">NEWS</a></li>
-                        <li><a href="05_contact.html">CONTACT</a></li>
-                        <li><a href="02_about_us.html">ABOUT US</a></li>
-                </ul>
-
-                <div class="clearfix"></div>
-        </div><!-- container -->
-</header>
-
-
 <section class="bg-1 h-400x main-slider pos-relative">
         <div class="triangle-up pos-bottom"></div>
         <div class="container h-100">
