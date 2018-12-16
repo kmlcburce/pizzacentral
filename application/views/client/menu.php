@@ -24,10 +24,10 @@
                         die('Not connected to Database'.mysqli_connect_error());
                 }else{
 
-                        $rs = mysqli_query($conn,"SELECT * FROM product_profile LEFT JOIN order_form order_form.prod_id = product_profile.prod_id");
-                        if(mysqli_num_rows($rs) > 0){
+                      //  $rs = mysqli_query($conn,"SELECT * FROM product_profile LEFT JOIN order_form order_form.prod_id = product_profile.prod_id");
+                      //  if(mysqli_num_rows($rs) > 0){
                         
-                        while($row = mysqli_fetch_array($rs)){
+                       // while($row = mysqli_fetch_array($rs)){
                                
                         ?>
 
@@ -37,20 +37,20 @@
                                         <div class="s-left"><img class="br-3" src="<?php echo base_url('assets/images/menu-1-120x120.jpg')?>" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Margherita</b>
-                                                        <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["prod_price"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
+                                                        <input type="button" class="color-primary float-right" name="" value="₱299.00" onclick="alert('Added to cart');"></h5>
                                                 <p class="pr-70">Made with San Marzano tomatoes, mozzarella fior di latte, fresh basil, salt and extra-virgin olive oil.</p>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
                         <?php
-                                $row = mysqli_fetch_array($price);
+                           //     $row = mysqli_fetch_array($price);
                         ?>
                         <div class="col-md-6 food-menu pizza">
                                 <div class="sided-90x mb-30 ">
                                         <div class="s-left"><img class="br-3" src="<?php echo base_url('assets/images/menu-1-120x120.jpg')?>" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Hawaiian</b>
-                                                        <input type="button" class="color-primary float-right" name="" value="<?php echo "₱".$row["prod_price"];?>" onclick="alert(Added <?php echo "".$row["prod_name"];?> to cart);"></h5>
+                                                        <input type="button" class="color-primary float-right" name="" value="₱350.00" onclick="alert('Added to cart');"></h5>
                                                 <p class="pr-70">Topped with tomato sauce, cheese, pineapple, and back bacon or ham. </p>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
@@ -59,8 +59,8 @@
 
                         <?php
         }
-}
-}
+//}
+//}
         ?>
         </div><!-- container -->
 </section>
