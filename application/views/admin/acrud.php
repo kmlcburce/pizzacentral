@@ -13,8 +13,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('assets/admin/dashboard.css')?>" rel="stylesheet">
-  <style type="text/css">/* Chart.js */
-@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+  /head>
 
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
@@ -131,9 +130,7 @@
 
     <!-- Icons -->
     <script src="<?php echo base_url('assets/admin/feather.min.js.download')?>"></script>
-    <script>
-      feather.replace()
-    </script>
+    <script>feather.replace()</script>
 
     
     
