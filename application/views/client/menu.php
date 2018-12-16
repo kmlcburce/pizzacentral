@@ -24,8 +24,7 @@
                         die('Not connected to Database'.mysqli_connect_error());
                 }else{
 
-                        $rs = mysqli_query($conn,"SELECT * FROM prod_profile");
-                        echo "$rs";
+                        $rs = mysqli_query($conn,"SELECT * FROM product_profile LEFT JOIN order_form order_form.prod_id = product_profile.prod_id");
                         if(mysqli_num_rows($rs) > 0){
                         
                         while($row = mysqli_fetch_array($rs)){

@@ -32,9 +32,7 @@
                                                 <a class="plr-20 mtb-10 brder-lr-lite-black-2" href="#"><b>in Recipes</b></a>
                                                 <a class="plr-20 mtb-10" href="#"><b>3 Comments</b></a>
                                         </h6>
-                                        <p class="mt-30">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit
-                                                elementum quis. Enean porttitor eros non ultrices convallis. Vivamus quis dolor ut arcu lobortis finibus a vitae leo.
-                                                Sed eget tempus sem. Nullam sed lacus sed metus tincidunt lobortis lobortis at nibh. Morbi euismod, arcu in gravida rhoncus</p>
+                                        <p class="mt-30">Oh snap, Pewdiepie just reached 76 mil subs. Put in the lasagna</p>
                                 </div><!--mb-30-->
 
                                 <div class="mb-50 mb-sm-30">
@@ -53,9 +51,7 @@
                                                 <a class="plr-20 mtb-10 brder-lr-lite-black-2" href="#"><b>in Recipes</b></a>
                                                 <a class="plr-20 mtb-10" href="#"><b>3 Comments</b></a>
                                         </h6>
-                                        <p class="mt-30">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit
-                                                elementum quis. Enean porttitor eros non ultrices convallis. Vivamus quis dolor ut arcu lobortis finibus a vitae leo.
-                                                Sed eget tempus sem. Nullam sed lacus sed metus tincidunt lobortis lobortis at nibh. Morbi euismod, arcu in gravida rhoncus</p>
+                                        <p class="mt-30">Raviolli raviolli give me the formiolli</p>
                                 </div><!--mb-30-->
 
                                 <div class="mb-50 mb-sm-30">
@@ -74,9 +70,7 @@
                                                 <a class="plr-20 mtb-10 brder-lr-lite-black-2" href="#"><b>in Recipes</b></a>
                                                 <a class="plr-20 mtb-10" href="#"><b>3 Comments</b></a>
                                         </h6>
-                                        <p class="mt-30">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit
-                                                elementum quis. Enean porttitor eros non ultrices convallis. Vivamus quis dolor ut arcu lobortis finibus a vitae leo.
-                                                Sed eget tempus sem. Nullam sed lacus sed metus tincidunt lobortis lobortis at nibh. Morbi euismod, arcu in gravida rhoncus</p>
+                                        <p class="mt-30">It's pasta... but with tomatoes. Surprise!</p>
                                 </div><!--mb-30-->
 
                                 <ul class="font-14 mb-30">
