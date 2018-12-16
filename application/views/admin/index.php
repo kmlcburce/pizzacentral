@@ -64,12 +64,41 @@
             <table class="table table-striped table-sm">
                 <thead>
                     <tr>
-                        <td>ID</td><td>Name</td><td>Description</td><td>Price</td><td>Status</td>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Price</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    
+                        <td>0000000001</td>
+                        <td>Margherita</td>
+                        <td>Made with San Marzano tomatoes, mozzarella fior di latte, fresh basil, salt and extra-virgin olive o</td>
+                        <td>pizza</td>
+                        <td>299</td>
+                    </tr>
+                    <tr>
+                        <td>0000000002</td>
+                        <td>Hawaiian</td>
+                        <td>Pineapple, Tomato sauce, Ham slices</td>
+                        <td>pizza</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>0000000003</td>
+                        <td>Napolitan</td>
+                        <td>tomato sauce, basil</td>
+                        <td>pasta</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>0000000004</td>
+                        <td>Agli o olio</td>
+                        <td>Olive oil, basil, pasta</td>
+                        <td>pasta</td>
+                        <td>260</td>
                     </tr>
                 </tbody>
             </table>
@@ -127,12 +156,21 @@
               <table class="table table-striped table-sm">
                   <thead>
                       <tr>
-                          <td>ID</td><td>Name</td><td>Address</td><td>Status</td>
+                          <td>ID</td>
+                          <td>Name</td>
+                          <td>Address</td>
                       </tr>
                   </thead>
                   <tbody>
                       <tr>
-                      
+                          <td>0000000001</td>
+                          <td>Branch1</td>
+                          <td>One Paseo, Paseo Saturnino</td>
+                      </tr>
+                      <tr>
+                          <td>0000000002</td>
+                          <td>Branch2</td>
+                          <td>City Time Square, Mantawi Ave.</td>
                       </tr>
                   </tbody>
               </table>
@@ -177,12 +215,14 @@
               <table class="table table-striped table-sm">
                   <thead>
                       <tr>
-                          <td>ID</td><td>Name</td><td>Address</td><td>Status</td>
+                          <td>ID</td>
+                          <td>Name</td>
                       </tr>
                   </thead>
                   <tbody>
                       <tr>
-                      
+                          <td>0000000001</td>
+                          <td>Michelangelo's</td>
                       </tr>
                   </tbody>
               </table>

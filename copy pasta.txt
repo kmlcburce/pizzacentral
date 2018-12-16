@@ -1,0 +1,8 @@
+ID		Name	Address
+0000000001	Branch1	One Paseo, Paseo Saturnino
+0000000002	Branch2	City Time Square, Mantawi Ave.
+
+
+
+ID		Name
+0000000001	Michelangelo's
