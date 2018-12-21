@@ -180,6 +180,11 @@
 
             <form class="add_branch" method="post" action="<?php echo base_url()?>Admin/add_branch_validation">
               <h4>Add Branch</h4>
+                <?php
+                if ($this->uri->segment(2)=="added") {
+                    echo '<p class="text-success">Branch Added</p>';
+                  }  
+                ?>
                 <input type="text" name="ab_username" placeholder="Username" class="form-control">
                 <span class="text-danger"><?php echo form_error("ab_username");?></span>
                 <input type="password" name="ab_password" placeholder="Password" class="form-control">

@@ -36,6 +36,7 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules("ab_username", "Username", 'required');
 		$this->form_validation->set_rules("ab_password", "Password", 'required');
 		$this->form_validation->set_rules("ab_address", "Address", 'required');
+		$type="1";
 
 		if ($this->form_validation->run()) 
 		{
@@ -44,14 +45,20 @@ class Admin extends CI_Controller {
 			$data = array(
 				"u_name" 	=>$this->input->post("ab_username"),
 				"u_pass" 	=>$this->input->post("ab_password"),
-				"u_mail" 	=>$this->input->post("ab_address"),
-				"u_type" 	=>$this->input->post('branch')
-			)
+				"u_email" 	=>$this->input->post("ab_address"),
+				"u_type" 	=>$type
+			);
+			$this->Admin_model->add_branch($data);
+			redirect(base_url()."Admin/added");
 		}
 		else
 		{
 			//false
 			$this->index();
 		}
+	}
+	public function added()
+	{
+		$this->index();
 	}
 }
