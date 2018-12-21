@@ -184,8 +184,6 @@
                 <span class="text-danger"><?php echo form_error("ab_username");?></span>
                 <input type="password" name="ab_password" placeholder="Password" class="form-control">
                 <span class="text-danger"><?php echo form_error("ab_password");?></span>
-                <input type="password" name="ab_cpass" placeholder="Confirm Password" class="form-control">
-                <span class="text-danger"><?php echo form_error("ab_cpass");?></span>
                 <input type="text" name="ab_address" placeholder="Address" class="form-control">
                 <span class="text-danger"><?php echo form_error("ab_address");?></span>
                 <input type="submit" name="ab_sub" value="Submit">

@@ -35,12 +35,22 @@ class Admin extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules("ab_username", "Username", 'required');
 		$this->form_validation->set_rules("ab_password", "Password", 'required');
-		$this->form_validation->set_rules("ab_cpass", "Password Confirmation", 'required');
 		$this->form_validation->set_rules("ab_address", "Address", 'required');
-		if ($this->form_validation->run()) {
+
+		if ($this->form_validation->run()) 
+		{
+			//true
 			$this->load->model("Admin_model");
+			$data = array(
+				"u_name" 	=>$this->input->post("ab_username"),
+				"u_pass" 	=>$this->input->post("ab_password"),
+				"u_mail" 	=>$this->input->post("ab_address"),
+				"u_type" 	=>$this->input->post('branch')
+			)
 		}
-		else{
+		else
+		{
+			//false
 			$this->index();
 		}
 	}
