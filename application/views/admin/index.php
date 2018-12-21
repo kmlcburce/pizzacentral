@@ -72,52 +72,55 @@
                       </tr>
                   </thead>
                   <tbody>
-                      <tr>
-                          <td>0000000001</td>
-                          <td>Margherita</td>
-                          <td>Made with San Marzano tomatoes, mozzarella fior di latte, fresh basil, salt and extra-virgin olive o</td>
-                          <td>pizza</td>
-                          <td>299</td>
-                      </tr>
-                      <tr>
-                          <td>0000000002</td>
-                          <td>Hawaiian</td>
-                          <td>Pineapple, Tomato sauce, Ham slices</td>
-                          <td>pizza</td>
-                          <td>250</td>
-                      </tr>
-                      <tr>
-                          <td>0000000003</td>
-                          <td>Napolitan</td>
-                          <td>tomato sauce, basil</td>
-                          <td>pasta</td>
-                          <td>150</td>
-                      </tr>
-                      <tr>
-                          <td>0000000004</td>
-                          <td>Agli o olio</td>
-                          <td>Olive oil, basil, pasta</td>
-                          <td>pasta</td>
-                          <td>260</td>
-                      </tr>
+                      <?php 
+                      if($fetch_product_data->num_rows() >0) 
+                      {
+                        foreach ($fetch_product_data->result() as $row) {
+                          ?>
+                          <tr>
+                            <td><?php echo $row->prod_id; ?></td>
+                            <td><?php echo $row->prod_name; ?></td>
+                            <td><?php echo $row->prod_desc; ?></td>
+                            <td><?php echo $row->prod_type; ?></td>
+                            <td><?php echo $row->prod_price; ?></td>
+                          </tr>
+                          <?php 
+                        }
+                      }
+                      else{
+                        ?>
+                        <tr>
+                          <td colspan="5">No Data Found</td>
+                        </tr>
+                        <?php
+                      }
+                      ?>
                   </tbody>
               </table>
             </form>
-             <form class="add_prod">
+             <form class="add_prod" method="post" action="<?php echo base_url()?>Admin/add_product_validation">
               <h4>Add Product</h4>
-              <input type="text" name="fran_name" placeholder="Pizzeria Name">
-              <input type="text" name="prod_name" placeholder="Product Name">
-              <input type="text" name="prod_desc" placeholder="Description">
-              <input type="text" name="prod_price" placeholder="Price">
+              <?php
+                if ($this->uri->segment(2)=="added_prod") {
+                    echo '<p class="text-success">Product Added</p>';
+                  }  
+                ?>
+              <input type="text" name="ap_prod_name" placeholder="Product Name" class="form-control">
+              <span class="text-danger"><?php echo form_error("ap_prod_name");?></span>
+              <input type="text" name="ap_prod_desc" placeholder="Description" class="form-control">
+              <span class="text-danger"><?php echo form_error("ap_prod_desc");?></span>
+              <input type="text" name="ap_prod_price" placeholder="Price" class="form-control">
+              <span class="text-danger"><?php echo form_error("ap_prod_price");?></span>
               <table>
                 <tr>
-                  <td><input type="radio" name="prod_type" value="pizza"><p>Pizza</p></td>
-                  <td><input type="radio" name="prod_type" value="pasta"><p>Pasta</p></td>
-                  <td><input type="radio" name="prod_type" value="salad"><p>Salad</p></td>
-                  <td><input type="radio" name="prod_type" value="dessert"><p>Dessert</p></td>
+                  <td><input type="radio" name="ap_prod_type" value="pizza"><p>Pizza</p></td>
+                  <td><input type="radio" name="ap_prod_type" value="pasta"><p>Pasta</p></td>
+                  <td><input type="radio" name="ap_prod_type" value="salad"><p>Salad</p></td>
+                  <td><input type="radio" name="ap_prod_type" value="dessert"><p>Dessert</p></td>
                 </tr>
               </table>
-              <input type="button" name="a_sub1" value="Submit">
+              <span class="text-danger"><?php echo form_error("ap_prod_type");?></span>
+              <input type="submit" name="ap_sub" value="Submit">
              </form>
              <form class="remove_prod">
               <h4>Remove Product</h4>
@@ -154,7 +157,7 @@
 <!-- Branches -->
           <div>
             <h2>Branches</h2>
-            <form class="table">
+            <div class="table-responsive">
               <table class="table table-striped table-sm">
                   <thead>
                       <tr>
@@ -164,24 +167,39 @@
                       </tr>
                   </thead>
                   <tbody>
-                      <tr>
-                          <td>0000000001</td>
-                          <td>Branch1</td>
-                          <td>One Paseo, Paseo Saturnino</td>
-                      </tr>
-                      <tr>
-                          <td>0000000002</td>
-                          <td>Branch2</td>
-                          <td>City Time Square, Mantawi Ave.</td>
-                      </tr>
+                      <?php 
+                      if($fetch_branch_data->num_rows() >0) 
+                      {
+                        foreach ($fetch_branch_data->result() as $row) {
+                          if($row->u_type == "1"){
+
+
+                          ?>
+                          <tr>
+                            <td><?php echo $row->u_id; ?></td>
+                            <td><?php echo $row->u_name; ?></td>
+                            <td><?php echo $row->u_email; ?></td>
+                          </tr>
+                          <?php 
+                          }
+                        }
+                      }
+                      else{
+                        ?>
+                        <tr>
+                          <td colspan="3">No Data Found</td>
+                        </tr>
+                        <?php
+                      }
+                      ?>
                   </tbody>
               </table>
-            </form>
+            </div>
 
             <form class="add_branch" method="post" action="<?php echo base_url()?>Admin/add_branch_validation">
               <h4>Add Branch</h4>
                 <?php
-                if ($this->uri->segment(2)=="added") {
+                if ($this->uri->segment(2)=="added_bran") {
                     echo '<p class="text-success">Branch Added</p>';
                   }  
                 ?>
@@ -223,26 +241,56 @@
             <h2>Franchises</h2>
             <form class="table">
               <table class="table table-striped table-sm">
-                  <thead>
-                      <tr>
-                          <td>ID</td>
-                          <td>Name</td>
-                      </tr>
-                  </thead>
+                <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                  </tr>
+                </thead>
+                  
                   <tbody>
-                      <tr>
-                          <td>0000000001</td>
-                          <td>Michelangelo's</td>
-                      </tr>
+                      <?php 
+                      if($fetch_branch_data->num_rows() >0) 
+                      {
+                        foreach ($fetch_branch_data->result() as $row) {
+                          if($row->u_type == "2"){
+
+
+                          ?>
+                          <tr>
+                            <td><?php echo $row->u_id; ?></td>
+                            <td><?php echo $row->u_name; ?></td>
+                            <td><?php echo $row->u_email; ?></td>
+                          </tr>
+                          <?php 
+                          }
+                        }
+                      }
+                      else{
+                        ?>
+                        <tr>
+                          <td colspan="3">No Data Found</td>
+                        </tr>
+                        <?php
+                      }
+                      ?>
                   </tbody>
               </table>
             </form>
-            <form class="add_franchise">
+            <form class="add_franchise" method="post" action="<?php echo base_url()?>Admin/add_franchise_validation">
               <h4>Add Franchise</h4>
-              <input type="text" name="username" placeholder="Username">
-              <input type="text" name="password" placeholder="Password">
-              <input type="text" name="cpass" placeholder="Confirm Password">
-              <input type="button" name="a_sub3" value="Submit">
+              <?php
+                if ($this->uri->segment(2)=="added_fran") {
+                    echo '<p class="text-success">Franchise Added</p>';
+                  }  
+                ?>
+              <input type="text" name="af_username" placeholder="Username" class="form-control">
+               <span class="text-danger"><?php echo form_error("af_username");?></span>
+              <input type="password" name="af_password" placeholder="Password" class="form-control">
+               <span class="text-danger"><?php echo form_error("af_password");?></span>
+              <input type="text" name="af_email" placeholder="Email" class="form-control">
+               <span class="text-danger"><?php echo form_error("af_email");?></span>
+              <input type="button" name="af_sub" value="Submit">
             </form>
             
             <form class="remove_franchise">

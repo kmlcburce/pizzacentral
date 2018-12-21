@@ -20,7 +20,10 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('admin/index');
+		$this->load->model("Admin_model");
+		$data["fetch_branch_data"] = $this->Admin_model->fetch_branch_data();
+		$data["fetch_product_data"] = $this->Admin_model->fetch_product_data();
+		$this->load->view("admin/index",$data);
 	}
 	public function menu()
 	{
@@ -49,7 +52,7 @@ class Admin extends CI_Controller {
 				"u_type" 	=>$type
 			);
 			$this->Admin_model->add_branch($data);
-			redirect(base_url()."Admin/added");
+			redirect(base_url()."Admin/added_bran");
 		}
 		else
 		{
@@ -57,7 +60,69 @@ class Admin extends CI_Controller {
 			$this->index();
 		}
 	}
-	public function added()
+	public function add_franchise_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules("af_username", "Username", 'required');
+		$this->form_validation->set_rules("af_password", "Password", 'required');
+		$this->form_validation->set_rules("af_email", "Address", 'required');
+		$type="2";
+
+		if ($this->form_validation->run()) 
+		{
+			//true
+			$this->load->model("Admin_model");
+			$data = array(
+				"u_name" 	=>$this->input->post("af_username"),
+				"u_pass" 	=>$this->input->post("af_password"),
+				"u_email" 	=>$this->input->post("af_email"),
+				"u_type" 	=>$type
+			);
+			$this->Admin_model->add_branch($data);
+			redirect(base_url()."Admin/added_fran");
+		}
+		else
+		{
+			//false
+			$this->index();
+		}
+	}
+	public function add_product_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules("ap_prod_name", "Product Name", 'required');
+		$this->form_validation->set_rules("ap_prod_desc", "Description", 'required');
+		$this->form_validation->set_rules("ap_prod_price", "Price", 'required|numeric');
+		$this->form_validation->set_rules("ap_prod_type", "Type", 'required');
+
+		if ($this->form_validation->run()) 
+		{
+			//true
+			$this->load->model("Admin_model");
+			$data = array(
+				"prod_name" 	=>$this->input->post("ap_prod_name"),
+				"prod_desc" 	=>$this->input->post("ap_prod_desc"),
+				"prod_price" 	=>$this->input->post("ap_prod_price"),
+				"prod_type" 	=>$this->input->post("ap_prod_type"),
+			);
+			$this->Admin_model->add_branch($data);
+			redirect(base_url()."Admin/added_prod");
+		}
+		else
+		{
+			//false
+			$this->index();
+		}
+	}
+	public function added_prod()
+	{
+		$this->index();
+	}
+	public function added_bran()
+	{
+		$this->index();
+	}
+	public function added_fran()
 	{
 		$this->index();
 	}
