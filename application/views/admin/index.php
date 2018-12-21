@@ -58,100 +58,102 @@
             </div>
           </div>
 <!-- Products -->
-          <h2>Products</h2>
-
-          <form class="table">
-            <table class="table table-striped table-sm">
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Price</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>0000000001</td>
-                        <td>Margherita</td>
-                        <td>Made with San Marzano tomatoes, mozzarella fior di latte, fresh basil, salt and extra-virgin olive o</td>
-                        <td>pizza</td>
-                        <td>299</td>
-                    </tr>
-                    <tr>
-                        <td>0000000002</td>
-                        <td>Hawaiian</td>
-                        <td>Pineapple, Tomato sauce, Ham slices</td>
-                        <td>pizza</td>
-                        <td>250</td>
-                    </tr>
-                    <tr>
-                        <td>0000000003</td>
-                        <td>Napolitan</td>
-                        <td>tomato sauce, basil</td>
-                        <td>pasta</td>
-                        <td>150</td>
-                    </tr>
-                    <tr>
-                        <td>0000000004</td>
-                        <td>Agli o olio</td>
-                        <td>Olive oil, basil, pasta</td>
-                        <td>pasta</td>
-                        <td>260</td>
-                    </tr>
-                </tbody>
-            </table>
-          </form>
-           <form class="add_prod">
-            <h4>Add Product</h4>
-            <input type="text" name="fran_name" placeholder="Pizzeria Name">
-            <input type="text" name="prod_name" placeholder="Product Name">
-            <input type="text" name="prod_desc" placeholder="Description">
-            <input type="text" name="prod_price" placeholder="Price">
-            <table>
-              <tr>
-                <td><input type="radio" name="prod_type" value="pizza"><p>Pizza</p></td>
-                <td><input type="radio" name="prod_type" value="pasta"><p>Pasta</p></td>
-                <td><input type="radio" name="prod_type" value="salad"><p>Salad</p></td>
-                <td><input type="radio" name="prod_type" value="dessert"><p>Dessert</p></td>
-              </tr>
-            </table>
-            <input type="button" name="a_sub1" value="Submit">
-           </form>
-           <form class="remove_prod">
-            <h4>Remove Product</h4>
-            <input type="text" name="remove_id" placeholder="ID">
-            <input type="button" name="r_sub1" value="Submit">
-           </form>
-           <form class="edit_prod">
-            <h4>Edit Product</h4>
-             <input type="edit_id" name="ID">
-             <input type="button" name="get_id" value="Find">
-             <table>
-              <tr>
-               
-              </tr>
-             </table>
-             <input type="text" name="fran_name" placeholder="Pizzeria Name">
-             <input type="text" name="prod_name" placeholder="Product Name">
-             <input type="text" name="prod_desc" placeholder="Description">
-             <input type="text" name="prod_price" placeholder="Price">
-             <table>
-               <tr>
-                 <td><input type="radio" name="prod_type" value="pizza"><p>Pizza</p></td>
-                 <td><input type="radio" name="prod_type" value="pasta"><p>Pasta</p></td>
-                 <td><input type="radio" name="prod_type" value="salad"><p>Salad</p></td>
-                 <td><input type="radio" name="prod_type" value="dessert"><p>Dessert</p></td>
-               </tr>
-             </table>
-             <input type="button" name="e_sub1" value="Submit">
-
-           </form>
+          <div>
+            <h2>Products</h2>
+            <form class="table">
+              <table class="table table-striped table-sm">
+                  <thead>
+                      <tr>
+                          <td>ID</td>
+                          <td>Name</td>
+                          <td>Description</td>
+                          <td>Type</td>
+                          <td>Price</td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>0000000001</td>
+                          <td>Margherita</td>
+                          <td>Made with San Marzano tomatoes, mozzarella fior di latte, fresh basil, salt and extra-virgin olive o</td>
+                          <td>pizza</td>
+                          <td>299</td>
+                      </tr>
+                      <tr>
+                          <td>0000000002</td>
+                          <td>Hawaiian</td>
+                          <td>Pineapple, Tomato sauce, Ham slices</td>
+                          <td>pizza</td>
+                          <td>250</td>
+                      </tr>
+                      <tr>
+                          <td>0000000003</td>
+                          <td>Napolitan</td>
+                          <td>tomato sauce, basil</td>
+                          <td>pasta</td>
+                          <td>150</td>
+                      </tr>
+                      <tr>
+                          <td>0000000004</td>
+                          <td>Agli o olio</td>
+                          <td>Olive oil, basil, pasta</td>
+                          <td>pasta</td>
+                          <td>260</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </form>
+             <form class="add_prod">
+              <h4>Add Product</h4>
+              <input type="text" name="fran_name" placeholder="Pizzeria Name">
+              <input type="text" name="prod_name" placeholder="Product Name">
+              <input type="text" name="prod_desc" placeholder="Description">
+              <input type="text" name="prod_price" placeholder="Price">
+              <table>
+                <tr>
+                  <td><input type="radio" name="prod_type" value="pizza"><p>Pizza</p></td>
+                  <td><input type="radio" name="prod_type" value="pasta"><p>Pasta</p></td>
+                  <td><input type="radio" name="prod_type" value="salad"><p>Salad</p></td>
+                  <td><input type="radio" name="prod_type" value="dessert"><p>Dessert</p></td>
+                </tr>
+              </table>
+              <input type="button" name="a_sub1" value="Submit">
+             </form>
+             <form class="remove_prod">
+              <h4>Remove Product</h4>
+              <input type="text" name="remove_id" placeholder="ID">
+              <input type="button" name="r_sub1" value="Submit">
+             </form>
+             <form class="edit_prod">
+              <h4>Edit Product</h4>
+               <input type="edit_id" name="ID">
+               <input type="button" name="get_id" value="Find">
+               <table>
+                <tr>
+                 
+                </tr>
+               </table>
+               <input type="text" name="fran_name" placeholder="Pizzeria Name">
+               <input type="text" name="prod_name" placeholder="Product Name">
+               <input type="text" name="prod_desc" placeholder="Description">
+               <input type="text" name="prod_price" placeholder="Price">
+               <table>
+                 <tr>
+                   <td><input type="radio" name="prod_type" value="pizza"><p>Pizza</p></td>
+                   <td><input type="radio" name="prod_type" value="pasta"><p>Pasta</p></td>
+                  <td><input type="radio" name="prod_type" value="salad"><p>Salad</p></td>
+                  <td><input type="radio" name="prod_type" value="dessert"><p>Dessert</p></td>
+                </tr>
+              </table>
+              <input type="button" name="e_sub1" value="Submit">
+            </form>
+          </div>
+          
 <br>
 <br>
 <!-- Branches -->
-          <h2>Branches</h2>
+          <div>
+            <h2>Branches</h2>
             <form class="table">
               <table class="table table-striped table-sm">
                   <thead>
@@ -176,41 +178,46 @@
               </table>
             </form>
 
-          <form class="add_branch">
-            <h4>Add Branch</h4>
-              <input type="text" name="fran_name" placeholder="Pizzeria Name">
+            <form class="add_branch" method="post" action="<?php echo base_url()?>Admin/add_branch_validation">
+              <h4>Add Branch</h4>
+                <input type="text" name="ab_username" placeholder="Username" class="form-control">
+                <span class="text-danger"><?php echo form_error("ab_username");?></span>
+                <input type="password" name="ab_password" placeholder="Password" class="form-control">
+                <span class="text-danger"><?php echo form_error("ab_password");?></span>
+                <input type="password" name="ab_cpass" placeholder="Confirm Password" class="form-control">
+                <span class="text-danger"><?php echo form_error("ab_cpass");?></span>
+                <input type="text" name="ab_address" placeholder="Address" class="form-control">
+                <span class="text-danger"><?php echo form_error("ab_address");?></span>
+                <input type="submit" name="ab_sub" value="Submit">
+            </form>
+            <form class="remove_branch">
+              <h4>Remove Branch</h4>
+              <input type="text" name="remove_id" placeholder="ID" class="form-control">
+              <input type="submit" name="r_sub2" value="Submit">
+            </form>
+            <form class="edit_branch">
+              <h4>Edit Branch</h4>
+              <input type="edit_id" name="ID" class="form-control">
+              <input type="button" name="get_id" value="Find">
+              <table>
+                <tr>
+                 
+                </tr>
+              </table>
               <input type="text" name="username" placeholder="Username">
               <input type="text" name="password" placeholder="Password">
               <input type="text" name="cpass" placeholder="Confirm Password">
               <input type="text" name="address" placeholder="Address">
-              <input type="button" name="a_sub2" value="Submit">
-          </form>
-          <form class="remove_branch">
-            <h4>Remove Branch</h4>
-            <input type="text" name="remove_id" placeholder="ID">
-            <input type="button" name="r_sub2" value="Submit">
-          </form>
-          <form class="edit_branch">
-            <h4>Edit Branch</h4>
-            <input type="edit_id" name="ID">
-            <input type="button" name="get_id" value="Find">
-            <table>
-              <tr>
-               
-              </tr>
-            </table>
-            <input type="text" name="fran_name" placeholder="Pizzeria Name">
-            <input type="text" name="username" placeholder="Username">
-            <input type="text" name="password" placeholder="Password">
-            <input type="text" name="cpass" placeholder="Confirm Password">
-            <input type="text" name="address" placeholder="Address">
-            <input type="button" name="e_sub2" value="Submit">
-          </form>
+              <input type="submit" name="e_sub2" value="Submit">
+            </form>
            
+          </div>
+          
 <br>
 <br>
 <!-- Franchises -->
-          <h2>Franchises</h2>
+          <div>
+            <h2>Franchises</h2>
             <form class="table">
               <table class="table table-striped table-sm">
                   <thead>
@@ -257,6 +264,8 @@
             </form>
 
 
+          </div>
+          
 
 
             <br>
