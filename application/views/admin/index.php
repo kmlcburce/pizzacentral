@@ -70,6 +70,7 @@
                           <td>Type</td>
                           <td>Price</td>
                           <td>Delete</td>
+                          <td>Update</td>
                       </tr>
                   </thead>
                   <tbody>
@@ -85,6 +86,7 @@
                             <td><?php echo $row->prod_type; ?></td>
                             <td><?php echo $row->prod_price; ?></td>
                             <td><a href="#" class="delete_product" id="<?php echo  $row->prod_id; ?>">Delete</a></td>
+                            <td><a href="<?php echo base_url(); ?>Admin/update_product/<?php echo  $row->prod_id; ?>">Edit</a></td>
                           </tr>
                           <?php 
                         }
@@ -124,34 +126,29 @@
               <span class="text-danger"><?php echo form_error("ap_prod_type");?></span>
               <input type="submit" name="ap_sub" value="Submit">
              </form>
-             <form class="remove_prod">
-              <h4>Remove Product</h4>
-              <input type="text" name="remove_id" placeholder="ID">
-              <input type="button" name="r_sub1" value="Submit">
-             </form>
-             <form class="edit_prod">
-              <h4>Edit Product</h4>
-               <input type="edit_id" name="ID">
-               <input type="button" name="get_id" value="Find">
-               <table>
-                <tr>
-                 
-                </tr>
-               </table>
-               <input type="text" name="fran_name" placeholder="Pizzeria Name">
-               <input type="text" name="prod_name" placeholder="Product Name">
-               <input type="text" name="prod_desc" placeholder="Description">
-               <input type="text" name="prod_price" placeholder="Price">
-               <table>
-                 <tr>
-                   <td><input type="radio" name="prod_type" value="pizza"><p>Pizza</p></td>
-                   <td><input type="radio" name="prod_type" value="pasta"><p>Pasta</p></td>
-                  <td><input type="radio" name="prod_type" value="salad"><p>Salad</p></td>
-                  <td><input type="radio" name="prod_type" value="dessert"><p>Dessert</p></td>
-                </tr>
-              </table>
-              <input type="button" name="e_sub1" value="Submit">
-            </form>
+             
+             <?php
+              if (isset($product_data)) 
+              {
+                foreach ($product_data->result() as $row) 
+                {
+                  ?>
+                  <h4>Edit Product</h4>
+                  <form class="edit_prod">
+                    <input type="text" name="prod_name" value="<?php echo $row->prod_name; ?>" placeholder="Product Name">
+                    <span class="text-danger"><?php echo form_error("prod_name");?></span>
+                    <input type="text" name="prod_desc" value="<?php echo $row->prod_desc; ?>" placeholder="Description">
+                    <input type="text" name="prod_price" value="<?php echo $row->prod_price; ?>" placeholder="Price">
+                    <input type="hidden" name="hidden_id" value="<?php echo $row->prod_id; ?>">
+                    <input type="submit" name="update" value="Update">
+                  </form>
+              <?php
+                }
+              }
+
+             ?>
+              
+            
           </div>
 <br>
 <br>
@@ -166,6 +163,7 @@
                           <td>Name</td>
                           <td>Address</td>
                           <td>Delete</td>
+                          <td>Update</td>
                       </tr>
                   </thead>
                   <tbody>

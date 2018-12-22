@@ -93,7 +93,6 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules("ap_prod_name", "Product Name", 'required');
 		$this->form_validation->set_rules("ap_prod_desc", "Description", 'required');
 		$this->form_validation->set_rules("ap_prod_price", "Price", 'required|numeric');
-		$this->form_validation->set_rules("ap_prod_type", "Type", 'required');
 
 		if ($this->form_validation->run()) 
 		{
@@ -105,8 +104,14 @@ class Admin extends CI_Controller {
 				"prod_price" 	=>$this->input->post("ap_prod_price"),
 				"prod_type" 	=>$this->input->post("ap_prod_type"),
 			);
-			$this->Admin_model->add_branch($data);
-			redirect(base_url()."Admin/added_prod");
+			if($this->input->post("ep_sub")){
+				$this->Admin_model->update_product($data,$this->input->post("hidden_id"));
+				redirect(base_url()."Admin/updated");
+			}
+			if($this->input->post("ap_sub")){
+				$this->Admin_model->add_product($data);
+				redirect(base_url()."Admin/added_prod");
+			}
 		}
 		else
 		{
@@ -141,6 +146,19 @@ class Admin extends CI_Controller {
 		redirect(base_url() . "Admin/deleted");
 	}
 	public function deleted()
+	{
+		$this->index();
+	}
+
+	public function update_product()
+	{
+		$prod_id = $this->uri->segment(3);
+		$this->load->model("Admin_model");
+		$data["product_data"] = $this->Admin_model->fetch_single_product($prod_id);
+		$data["fetch_product_data"] = $this->Admin_model->fetch_product_data();
+		$this->load->view("Admin/index",$data);
+	}
+	public function updated()
 	{
 		$this->index();
 	}

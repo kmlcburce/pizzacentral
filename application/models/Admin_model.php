@@ -29,4 +29,14 @@ class Admin_model extends CI_Model{
 		$this->db->delete("product_profile");
 	}
 
+	function fetch_single_product($prod_id){
+		$this->db->where("prod_id",$prod_id);
+		$query = $this->db->get("product_profile");
+		return $query;
+	}
+	function update_product($data,$id){
+		$this->db->where("prod_id",$id);
+		$this->db->update("product_profile");
+	}
+
 }
