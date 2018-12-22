@@ -126,4 +126,22 @@ class Admin extends CI_Controller {
 	{
 		$this->index();
 	}
+	public function delete_branch()
+	{
+		$u_id = $this->uri->segment(3);
+		$this->load->model("Admin_model");
+		$this->Admin_model->delete_branch($u_id);
+		redirect(base_url() . "Admin/deleted");
+	}
+	public function delete_product()
+	{
+		$prod_id = $this->uri->segment(3);
+		$this->load->model("Admin_model");
+		$this->Admin_model->delete_product($prod_id);
+		redirect(base_url() . "Admin/deleted");
+	}
+	public function deleted()
+	{
+		$this->index();
+	}
 }

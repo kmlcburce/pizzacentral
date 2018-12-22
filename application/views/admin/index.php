@@ -69,6 +69,7 @@
                           <td>Description</td>
                           <td>Type</td>
                           <td>Price</td>
+                          <td>Delete</td>
                       </tr>
                   </thead>
                   <tbody>
@@ -83,6 +84,7 @@
                             <td><?php echo $row->prod_desc; ?></td>
                             <td><?php echo $row->prod_type; ?></td>
                             <td><?php echo $row->prod_price; ?></td>
+                            <td><a href="#" class="delete_product" id="<?php echo  $row->prod_id; ?>">Delete</a></td>
                           </tr>
                           <?php 
                         }
@@ -151,7 +153,6 @@
               <input type="button" name="e_sub1" value="Submit">
             </form>
           </div>
-          
 <br>
 <br>
 <!-- Branches -->
@@ -164,6 +165,7 @@
                           <td>ID</td>
                           <td>Name</td>
                           <td>Address</td>
+                          <td>Delete</td>
                       </tr>
                   </thead>
                   <tbody>
@@ -179,6 +181,7 @@
                             <td><?php echo $row->u_id; ?></td>
                             <td><?php echo $row->u_name; ?></td>
                             <td><?php echo $row->u_email; ?></td>
+                            <td><a href="#" class="delete_branch" id="<?php echo  $row->u_id; ?>">Delete</a></td>
                           </tr>
                           <?php 
                           }
@@ -193,6 +196,7 @@
                       }
                       ?>
                   </tbody>
+                  
               </table>
             </div>
 
@@ -210,11 +214,6 @@
                 <input type="text" name="ab_address" placeholder="Address" class="form-control">
                 <span class="text-danger"><?php echo form_error("ab_address");?></span>
                 <input type="submit" name="ab_sub" value="Submit">
-            </form>
-            <form class="remove_branch">
-              <h4>Remove Branch</h4>
-              <input type="text" name="remove_id" placeholder="ID" class="form-control">
-              <input type="submit" name="r_sub2" value="Submit">
             </form>
             <form class="edit_branch">
               <h4>Edit Branch</h4>
@@ -245,6 +244,8 @@
                   <tr>
                       <th>ID</th>
                       <th>Name</th>
+                      <th>E-mail</th>
+                      <th>Delete</th>
                   </tr>
                 </thead>
                   
@@ -261,6 +262,7 @@
                             <td><?php echo $row->u_id; ?></td>
                             <td><?php echo $row->u_name; ?></td>
                             <td><?php echo $row->u_email; ?></td>
+                            <td><a href="#" class="delete_branch" id="<?php echo  $row->u_id; ?>">Delete</a></td>
                           </tr>
                           <?php 
                           }
@@ -292,13 +294,6 @@
                <span class="text-danger"><?php echo form_error("af_email");?></span>
               <input type="button" name="af_sub" value="Submit">
             </form>
-            
-            <form class="remove_franchise">
-              <h4>Remove Franchise</h4>
-              <input type="text" name="remove_id" placeholder="ID">
-              <input type="button" name="r_sub3" value="Submit">
-            </form>
-
             <form class="edit_franchise">
               <h4>Edit Franchise</h4>
               <input type="edit_id" name="ID">
@@ -317,8 +312,6 @@
 
           </div>
           
-
-
             <br>
             <br>
             <br>
@@ -337,5 +330,33 @@
     <!-- Icons -->
     <script src="<?php echo base_url('assets/admin/feather.min.js.download')?>"></script>
     <script>feather.replace()</script>
+
+    <!-- Delete Script-->
+    <script>
+      $(document).ready(function(){
+        $('.delete_branch').click(function(){
+          var id = $(this).attr("id");
+          if(confirm("Are you sure you want to delete this?")){
+            window.location="<?php echo base_url();?>Admin/delete_branch/"+id;
+          }
+          else{
+            return false;
+          }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('.delete_product').click(function(){
+          var id = $(this).attr("id");
+          if(confirm("Are you sure you want to delete this?")){
+            window.location="<?php echo base_url();?>Admin/delete_product/"+id;
+          }
+          else{
+            return false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
