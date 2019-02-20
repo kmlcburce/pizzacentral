@@ -140,7 +140,7 @@
                     <input type="text" name="prod_desc" value="<?php echo $row->prod_desc; ?>" placeholder="Description">
                     <input type="text" name="prod_price" value="<?php echo $row->prod_price; ?>" placeholder="Price">
                     <input type="hidden" name="hidden_id" value="<?php echo $row->prod_id; ?>">
-                    <input type="submit" name="update" value="Update">
+                    <input type="submit" name="ep_sub" value="Update">
                   </form>
               <?php
                 }
