@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Name</td>
+			<td>Description<td>
+			<td>Price<td>
+			<td>Cart</td>
+		</tr>
+		<tr>
+			<td id="hat">Hat</td>
+			<td></td>
+			<td id="hatprice">19.99</td>
+			<td><button onclick=" addCart(document.getElementById(hat), document.getElementById(hatprice);">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td id="">Chair</td>
+			<td></td>
+			<td>49.99</td>
+			<td><button onclick="addCart();">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>String</td>
+			<td></td>
+			<td>19.99</td>
+			<td><button onclick="addCart();">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>Dog</td>
+			<td></td>
+			<td>79.99</td>
+			<td><button onclick="addCart();">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>Quark</td>
+			<td></td>
+			<td>0.49</td>
+			<td><button onclick="addCart();">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>Soup</td>
+			<td></td>
+			<td>1.99</td>
+			<td><button onclick="addCart();">Add to cart</button></td>
+		</tr>
+	</table>
+	<ul>	</ul>
+	<script type="text/javascript">
+		var text,cart=[],sum=0;
+		text = "<ul>";
+		menu.forEach(update);
+		text += "</ul>";
+		text += "<p>";
+		text += sum
+		text += "</p>";
+		function addCart(name,price){
+			cart.push(name);
+			sum += parseInt(price);
+		}
+		function update(){
+			text+="<li>"+value+"</li>"
+		}
+	</script>
+</body>
+</html>
