@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Name</td>
+			<td>Description</td>
+			<td>Price</td>
+			<td>Cart</td>
+		</tr>
+		<tr>
+			<td id="hat">Hat</td>
+			<td></td>
+			<td id="hatprice">19.99</td>
+			<td><button onclick=" addCart('Hat', 19.99);">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td id="">Chair</td>
+			<td></td>
+			<td>49.99</td>
+			<td><button onclick="addCart('Chair',49.99);">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>String</td>
+			<td></td>
+			<td>19.99</td>
+			<td><button onclick="addCart('String',19.99);">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>Dog</td>
+			<td></td>
+			<td>79.99</td>
+			<td><button onclick="addCart('Dog',79.99);">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>Quark</td>
+			<td></td>
+			<td>0.49</td>
+			<td><button onclick="addCart('Quark',0.49);">Add to cart</button></td>
+		</tr>
+		<tr>
+			<td>Soup</td>
+			<td></td>
+			<td>1.99</td>
+			<td><button onclick="addCart('Soup',1.99);">Add to cart</button></td>
+		</tr>
+	</table>
+	<p id="sCart"></p>
+	<p></p>
+	<script type="text/javascript">
+	var text,sum,cart;
+	var cart=[];
+
+		text = "<ul>";
+		cart.forEach(update);
+		text += "</ul>";
+		text += "<p>";
+		text += sum;
+		text += "</p>";
+
+
+		document.getElementById("sCart").innerHTML = text;
+
+		var item= function(name,price,count){
+			this.name=name;
+			this.price=price;
+			this.count=count;
+		}
+
+		function addCart(name,price){
+			for (var i in cart){
+				if (cart[i].name===name){
+					cart[i].count++;
+					document.getElementById("sCart").innerHTML = text;
+					return;
+				}else{
+					cart.push(new item(name,price,1));
+					document.getElementById("sCart").innerHTML = text;
+				}
+			}
+		}
+		function update(value){
+			text+="<li>"+value.name+" "+value.count+"</li>";
+
+		}
+
+	</script>
+</body>
+</html>
